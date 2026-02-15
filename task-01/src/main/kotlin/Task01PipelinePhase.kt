@@ -23,8 +23,8 @@ class Task01PipelinePhase: PipelinePhase {
      */
     override fun invoke() {
         runBlocking {
-            val file = File(outputFileName)
-            val indexFile = File(indexOutputFileName)
+            val file = File(outputFileName).also { it.writeText("") }
+            val indexFile = File(indexOutputFileName).also { it.writeText("") }
             var totalCounter = 0
             bookIds.forEach { bookId ->
                 var currentPage = 1

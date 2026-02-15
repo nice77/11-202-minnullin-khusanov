@@ -11,6 +11,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation(project(":core"))
+    implementation(project(":task-01"))
 }
 
 kotlin {

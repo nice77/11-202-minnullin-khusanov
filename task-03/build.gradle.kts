@@ -1,6 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.3.0"
-    kotlin("plugin.serialization") version "2.3.0" apply false
+    kotlin("jvm")
 }
 
 group = "ru.info.search"
@@ -13,9 +12,7 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation(project(":core"))
-    implementation(project(":task-01"))
-    implementation(project(":task-02"))
-    implementation(project(":task-03"))
+    implementation("org.jsoup:jsoup:1.18.1")
 }
 
 kotlin {

@@ -16,6 +16,7 @@ dependencies {
     implementation(project(":task-01"))
     implementation(project(":task-02"))
     implementation(project(":task-03"))
+    implementation(project(":task-04"))
 }
 
 kotlin {

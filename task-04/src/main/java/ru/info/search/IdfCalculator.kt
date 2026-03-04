@@ -48,15 +48,10 @@ class IdfCalculator(private val data: CollectedData) {
     }
 
     /**
-     * Document Frequency для лемм:
-     * приоритетно берётся из invert-index.txt, иначе считается
-     * по наличию хотя бы одной формы в документе.
+     * Document Frequency для лемм
      */
     private fun computeLemmaDF(): Map<String, Int> {
-        // Если index.txt заполнен, используем его
         if (data.lemmaIndexDF.isNotEmpty()) {
-            // Дополняем вычисленными значениями для тех лемм,
-            // которых нет в index.txt
             val computed = computeLemmaDFFromDocs()
             return data.allLemmas.associateWith { lemma ->
                 data.lemmaIndexDF[lemma] ?: computed.getOrDefault(lemma, 0)

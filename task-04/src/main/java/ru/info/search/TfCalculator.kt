@@ -3,8 +3,6 @@ package ru.info.search
 /**
  * Считает Term Frequency для токенов и лемм.
  *
- * TF(token) = count(token, doc) / total_words_in_doc
- * TF(lemma) = sum(count(form_i, doc) for all forms) / total_words_in_doc
  */
 class TfCalculator(private val data: CollectedData) {
 

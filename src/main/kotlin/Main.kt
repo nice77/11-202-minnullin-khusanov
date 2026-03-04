@@ -6,8 +6,9 @@ private val pipeline = listOf(
     Task01PipelinePhase(),
     Task02PipelinePhase(),
     Task03PipelinePhase(),
+    Task04PipelinePhase()
 )
 
-fun main(args: Array<String>) {
+fun main() {
     pipeline.forEach(PipelinePhase::invoke)
 }
